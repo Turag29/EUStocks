@@ -1,0 +1,46 @@
+---
+title: "Euro Stocks App"
+author: "Robert Moldenhauer"
+date: "2022-12-04"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+```
+
+## Euro Stocks App
+
+This App enables you to view stock data. 
+
+Unfortunately only historic ones.
+
+- Learn about stock indices in the 90's
+- Pick one out of your four favorite indices
+- View the app via the link in this presentation
+
+## Data used
+
+As Data the R included data datasets::EUStockMarkets ws used. Get an overview here:
+
+```{r, echo=T, messages=F, comment = ""}
+data <- data.frame(datasets::EuStockMarkets) %>% 
+      mutate(time=rep(time(EuStockMarkets),1))
+head(data)
+```
+
+## The App
+
+Have a look on the App here:
+
+https://robertmoldenhauer.shinyapps.io/EUStocks/
+ 
+Unfortunately we cannot predict from this data in the far future :(
+
+## Thank you
+
+for your short attention!
+ 
+
+
